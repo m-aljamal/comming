@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-
+import Timer from "../components/Timer";
 export default function Home() {
   return (
     <div className="h-screen">
@@ -11,11 +11,14 @@ export default function Home() {
       </Head>
 
       <main className="grid grid-cols-2 h-screen">
-        <div className="bg-red-100">
-          test
+        <div className="bg-gray-800 text-white ">
+          <div className=" grid place-items-center h-screen  ">
+            <h2 className="text-4xl">We Are Coming Soon!</h2>
+            <Timer />
+          </div>
         </div>
-        <div className="bg-green-100">
-          <Image src='/img.jpg'  />
+        <div className="bg-green-100 relative  w-full">
+          <Image src="/img.jpg" layout="fill" objectFit="cover" priority  />
         </div>
       </main>
     </div>

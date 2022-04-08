@@ -8,30 +8,33 @@ const Timer = () => {
   }
 
   return (
-    <div className="flex gap-10">
-      <div className="box">
-        <p id="day" className="">
-          {dayes}
-        </p>
-        <span className="text">Days</span>
-      </div>
-
-      <div className="box">
-        <p id="hour">{hours}</p>
-        <span className="text">Hours</span>
-      </div>
-
-      <div className="box">
-        <p id="minute">{minutes}</p>
-        <span className="text">Minutes</span>
-      </div>
-
-      <div className="box">
-        <p id="second">{seconds}</p>
-        <span className="text">Seconds</span>
-      </div>
+    <div className="grid gap-2 sm:grid-cols-4 grid-cols-2">
+      <Container>
+        <p className="text-4xl">{dayes}</p>
+        <span className="text-sm">Days</span>
+      </Container>
+      <Container>
+        <p className="text-4xl">{hours}</p>
+        <span className="text-sm">Hours</span>
+      </Container>
+      <Container>
+        <p className="text-4xl">{minutes}</p>
+        <span className="text-sm">Minutes</span>
+      </Container>
+      <Container>
+        <p className="text-4xl">{seconds}</p>
+        <span className="text-sm">Seconds</span>
+      </Container>
     </div>
   );
 };
 
 export default Timer;
+
+const Container = ({ children }) => {
+  return (
+    <div className="bg-gray-600  rounded-full w-32 h-32 flex justify-center items-center flex-col">
+      {children}
+    </div>
+  );
+};

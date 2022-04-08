@@ -24,6 +24,7 @@ export default function Home() {
               <a
                 href="https://www.facebook.com/firstoneworkshop/"
                 target="_blank"
+                rel="noreferrer"
                 className="bg-red-500  p-2 rounded-full"
               >
                 <BsFacebook />
@@ -33,6 +34,7 @@ export default function Home() {
                 className="bg-red-500  p-2 rounded-full"
                 href="https://instagram.com/f1_workshop?utm_medium=copy_link"
                 target="_blank"
+                rel="noreferrer"
               >
                 <BsInstagram />
               </a>
